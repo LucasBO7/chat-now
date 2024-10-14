@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ChatNow_WebAPi.props" />
+</Project>

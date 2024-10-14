@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChatNow_WebAPi</name>
+    </assembly>
+    <members>
+        <member name="M:ChatNow_WebAPi.Controllers.LoginController.Post(ChatNow_WebAPi.ViewModels.UserLoginEmailDto)">
+            <summary>
+            Uses JWT Bearer Authentication to Login in an existent User account
+            </summary>
+            <param name="insertedUser">Object of type User</param>
+            <returns>Ok/NotFound</returns>
+        </member>
+        <member name="M:ChatNow_WebAPi.Controllers.UserController.Post(ChatNow_WebAPi.Domains.User)">
+            <summary>
+            Registers a new User in Db
+            </summary>
+            <param name="insertedUser">Object of User type</param>
+            <returns>OK or BADREQUEST</returns>
+        </member>
+        <member name="M:ChatNow_WebAPi.Interfaces.IUserRepository.Register(ChatNow_WebAPi.Domains.User)">
+            <summary>
+            Registers a new User in Db
+            </summary>
+            <param name="newUser">Object tyoe User</param>
+            <returns>NULL or Object User</returns>
+        </member>
+        <member name="M:ChatNow_WebAPi.Interfaces.IUserRepository.SearchForEmailAndPassword(System.String,System.String)">
+            <summary>
+            Searches an User in Db
+            </summary>
+            <param name="email">email inserted</param>
+            <param name="password">password inserted</param>
+            <returns>Object User</returns>
+        </member>
+        <member name="T:ChatNow_WebAPi.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ChatNow_WebAPi.Migrations.PropGoogleIdUser">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.PropGoogleIdUser.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.PropGoogleIdUser.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.PropGoogleIdUser.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ChatNow_WebAPi.Migrations.InsertedUserEmailProperty">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.InsertedUserEmailProperty.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.InsertedUserEmailProperty.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.InsertedUserEmailProperty.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ChatNow_WebAPi.Migrations.InsertedUserPasswordProperty">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.InsertedUserPasswordProperty.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.InsertedUserPasswordProperty.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.InsertedUserPasswordProperty.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ChatNow_WebAPi.Migrations.PropertyPasswordChangedLength">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.PropertyPasswordChangedLength.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.PropertyPasswordChangedLength.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.PropertyPasswordChangedLength.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Repositories.UserRepository.Register(ChatNow_WebAPi.Domains.User)">
+            <summary>
+            Registers a new User in Db with Email or GoogleId
+            </summary>
+            <param name="newUser">Object of type User</param>
+            <returns>NULL or User Object</returns>
+        </member>
+        <member name="M:ChatNow_WebAPi.Repositories.UserRepository.SearchForEmailAndPassword(System.String,System.String)">
+            <summary>
+            Searches an existent user by Email and Password
+            </summary>
+            <param name="email">Email inserted</param>
+            <param name="password">Password inserted</param>
+            <returns>NULL or User Object</returns>
+        </member>
+        <member name="M:ChatNow_WebAPi.Utils.Criptografia.GenerateHash(System.String)">
+            <summary>
+            Generate an Hash based on the inserted password
+            </summary>
+            <param name="password">Inserted password</param>
+            <returns>hashed password</returns>
+        </member>
+        <member name="M:ChatNow_WebAPi.Utils.Criptografia.CompareHash(System.String,System.String)">
+            <summary>
+            Verifies if inserted password's hash is equals of db's hashed password
+            </summary>
+            <param name="insertedHashPassword">Password inserted by User</param>
+            <param name="dbHashPassword">Password saved in db</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,6 @@
+@ChatNow_WebAPi_HostAddress = http://localhost:5106
+
+GET {{ChatNow_WebAPi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
