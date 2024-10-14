@@ -8,7 +8,7 @@
             <summary>
             Uses JWT Bearer Authentication to Login in an existent User account
             </summary>
-            <param name="insertedUser">Object of type User</param>
+            <param name="insertedUser">Object of type UserLoginEmailDto (Email, Password)</param>
             <returns>Ok/NotFound</returns>
         </member>
         <member name="M:ChatNow_WebAPi.Controllers.UserController.Post(ChatNow_WebAPi.Domains.User)">
@@ -25,13 +25,27 @@
             <param name="newUser">Object tyoe User</param>
             <returns>NULL or Object User</returns>
         </member>
+        <member name="M:ChatNow_WebAPi.Interfaces.IUserRepository.RegisterWithGoogle(ChatNow_WebAPi.ViewModels.UserGoogleDto)">
+            <summary>
+            Registers a new User in Db with Google Login
+            </summary>
+            <param name="newUser">Object User</param>
+            <returns>NULL or Object User</returns>
+        </member>
         <member name="M:ChatNow_WebAPi.Interfaces.IUserRepository.SearchForEmailAndPassword(System.String,System.String)">
             <summary>
             Searches an User in Db
             </summary>
             <param name="email">email inserted</param>
             <param name="password">password inserted</param>
-            <returns>Object User</returns>
+            <returns>NULL or Object User</returns>
+        </member>
+        <member name="M:ChatNow_WebAPi.Interfaces.IUserRepository.SearchByGoogleId(System.String)">
+            <summary>
+            Searches an User with Google in Db
+            </summary>
+            <param name="googleId">GoogleId inserted</param>
+            <returns>NULL or Object User</returns>
         </member>
         <member name="T:ChatNow_WebAPi.Migrations.InitialCreate">
             <inheritdoc />
@@ -106,6 +120,13 @@
             </summary>
             <param name="email">Email inserted</param>
             <param name="password">Password inserted</param>
+            <returns>NULL or User Object</returns>
+        </member>
+        <member name="M:ChatNow_WebAPi.Repositories.UserRepository.SearchByGoogleId(System.String)">
+            <summary>
+            Searches an User by his GoogleId
+            </summary>
+            <param name="googleId">GoogleId inserted</param>
             <returns>NULL or User Object</returns>
         </member>
         <member name="M:ChatNow_WebAPi.Utils.Criptografia.GenerateHash(System.String)">

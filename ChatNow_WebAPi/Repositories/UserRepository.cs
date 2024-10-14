@@ -2,6 +2,8 @@
 using ChatNow_WebAPi.Infra;
 using ChatNow_WebAPi.Interfaces;
 using ChatNow_WebAPi.Utils;
+using ChatNow_WebAPi.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace ChatNow_WebAPi.Repositories
 {
@@ -41,6 +43,25 @@ namespace ChatNow_WebAPi.Repositories
             _context.SaveChanges();
             return newUser;
         }
+        public User? RegisterWithGoogle(UserGoogleDto insertedUser)
+        {
+            bool userAlreadyExists = _context.Users.Any(u => u.GoogleId == insertedUser.GoogleId);
+
+            // Se já existir ou googleId estiver vazio
+            if (userAlreadyExists || String.IsNullOrEmpty(insertedUser.GoogleId))
+                return null;
+
+            // Formata para o usuário completo
+            User newUser = new()
+            {
+                Name = insertedUser.Name,
+                GoogleId = Criptografia.GenerateHash(insertedUser.GoogleId)
+            };
+
+            _context.Users.Add(newUser);
+            _context.SaveChanges();
+            return newUser;
+        }
 
         /// <summary>
         /// Searches an existent user by Email and Password
@@ -69,5 +90,36 @@ namespace ChatNow_WebAPi.Repositories
             // Se a senha NÃO for igual
             return null;
         }
+
+
+        /// <summary>
+        /// Searches an User by his GoogleId
+        /// </summary>
+        /// <param name="googleId">GoogleId inserted</param>
+        /// <returns>NULL or User Object</returns>
+        public User SearchByGoogleId(string googleId)
+        {
+            var usersLoggedWithGoogle = _context.Users.Where(u => u.GoogleId != null).ToList();
+
+            var searchedUser = usersLoggedWithGoogle.FirstOrDefault(u => Criptografia.CompareHash(googleId, u.GoogleId!) == true);
+
+            if (searchedUser is null)
+                return null!;
+
+            return searchedUser;
+
+            //var usersLoggedWithGoogle = _context.Users.Where(u => u.GoogleId != null).ToList();
+
+            //foreach (var item in usersLoggedWithGoogle)
+            //{
+            //    bool isEqual = Criptografia.CompareHash(googleId, item.GoogleId!);
+
+            //    if (isEqual)
+            //        return item;
+            //}
+
+            //return null;
+        }
+
     }
 }
