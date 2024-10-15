@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   AsideContainer,
   LayoutGrid,
@@ -11,7 +11,12 @@ export const RegisterPage = () => {
     email: "",
     password: "",
     confirmPassword: "",
+    googleId: ""
   });
+
+  useEffect(() => {
+    console.log(user);
+  }, [user])
 
   return (
     <AsideContainer>

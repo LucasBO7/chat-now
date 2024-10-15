@@ -1002,20 +1002,23 @@
           "lib/netstandard2.0/System.CodeDom.dll": {}
         }
       },
-      "System.Collections.Immutable/8.0.0": {
+      "System.Collections.Immutable/6.0.0": {
         "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
         "compile": {
-          "lib/net8.0/_._": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.Collections.Immutable.dll": {
+          "lib/net6.0/System.Collections.Immutable.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net6.0/_._": {}
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Composition/6.0.0": {
@@ -3322,32 +3325,25 @@
         "version.txt"
       ]
     },
-    "System.Collections.Immutable/8.0.0": {
-      "sha512": "AurL6Y5BA1WotzlEvVaIDpqzpIPvYnnldxru8oXJU2yFxFUy3+pNXjXd1ymO+RA0rq0+590Q8gaz2l3Sr7fmqg==",
+    "System.Collections.Immutable/6.0.0": {
+      "sha512": "l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA==",
       "type": "package",
-      "path": "system.collections.immutable/8.0.0",
+      "path": "system.collections.immutable/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
-        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Collections.Immutable.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
         "buildTransitive/netcoreapp2.0/System.Collections.Immutable.targets",
-        "lib/net462/System.Collections.Immutable.dll",
-        "lib/net462/System.Collections.Immutable.xml",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Collections.Immutable.dll",
+        "lib/net461/System.Collections.Immutable.xml",
         "lib/net6.0/System.Collections.Immutable.dll",
         "lib/net6.0/System.Collections.Immutable.xml",
-        "lib/net7.0/System.Collections.Immutable.dll",
-        "lib/net7.0/System.Collections.Immutable.xml",
-        "lib/net8.0/System.Collections.Immutable.dll",
-        "lib/net8.0/System.Collections.Immutable.xml",
         "lib/netstandard2.0/System.Collections.Immutable.dll",
         "lib/netstandard2.0/System.Collections.Immutable.xml",
-        "system.collections.immutable.8.0.0.nupkg.sha512",
+        "system.collections.immutable.6.0.0.nupkg.sha512",
         "system.collections.immutable.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -4276,24 +4272,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Batata Voadora\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\41365718875\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj",
+      "projectUniqueName": "C:\\Users\\41365718875\\Desktop\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj",
       "projectName": "ChatNow_WebAPi",
-      "projectPath": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj",
-      "packagesPath": "C:\\Users\\Batata Voadora\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\obj\\",
+      "projectPath": "C:\\Users\\41365718875\\Desktop\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj",
+      "packagesPath": "C:\\Users\\41365718875\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\41365718875\\Desktop\\chat-now\\ChatNow_WebAPi\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Batata Voadora\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\41365718875\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4301,7 +4292,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4375,20 +4365,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Microsoft.CodeAnalysis.Common 4.5.0 depende de System.Collections.Immutable (>= 6.0.0), mas System.Collections.Immutable 6.0.0 não foi encontrado. A melhor correspondência aproximada de System.Collections.Immutable 8.0.0 foi resolvida.",
-      "libraryId": "System.Collections.Immutable",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }

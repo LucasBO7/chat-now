@@ -6,9 +6,10 @@ import {
   Input,
   Typography,
 } from "@material-tailwind/react";
-import { useNavigate, useNavigation } from "react-router-dom";
+import { GoogleLogin } from "@react-oauth/google";
+import { useNavigate } from "react-router-dom";
 
-export const LoginForm = () => {
+export const LoginForm = ({ user, setUser }) => {
   const navigate = useNavigate();
 
   return (
@@ -52,6 +53,8 @@ export const LoginForm = () => {
               labelProps={{
                 className: "hidden",
               }}
+              value={user.name}
+              onChange={(txt) => setUser({ ...user, name: txt.target.value })}
             />
           </div>
 
@@ -77,8 +80,13 @@ export const LoginForm = () => {
               labelProps={{
                 className: "hidden",
               }}
+              value={user.password}
+              onChange={(txt) =>
+                setUser({ ...user, password: txt.target.value })
+              }
             />
           </div>
+
           <Typography
             className="text-beige"
             onClick={() => {
@@ -94,19 +102,14 @@ export const LoginForm = () => {
           </Button>
 
           {/* Login com Google */}
-          <Button
-            variant="outlined"
-            size="lg"
-            className="flex h-12 border-blue-gray-200 items-center justify-center gap-2 bg-white"
-            fullWidth
-          >
-            <img
-              src={`https://www.material-tailwind.com/logos/logo-google.png`}
-              alt="google"
-              className="h-6 w-6"
-            />{" "}
-            sign in with google
-          </Button>
+          <GoogleLogin
+            onSuccess={credentialResponse => {
+              setUser({ ...user, googleId: credentialResponse.credential });
+            }}
+            onError={() => {
+              alert('Login Failed');
+            }}
+          />
 
           {/* Message */}
           <Typography
@@ -261,20 +264,15 @@ export const RegisterForm = ({ user, setUser }) => {
             continue
           </Button>
 
-          {/* Login com Google */}
-          <Button
-            variant="outlined"
-            size="lg"
-            className="flex h-12 border-blue-gray-200 items-center justify-center gap-2 bg-white"
-            fullWidth
-          >
-            <img
-              src={`https://www.material-tailwind.com/logos/logo-google.png`}
-              alt="google"
-              className="h-6 w-6"
-            />{" "}
-            sign in with google
-          </Button>
+          {/* Login com o Google */}
+          <GoogleLogin
+            onSuccess={credentialResponse => {
+              setUser({ ...user, googleId: credentialResponse.credential });
+            }}
+            onError={() => {
+              alert('Login Failed');
+            }}
+          />
 
           {/* Message */}
           <Typography

@@ -1,16 +1,28 @@
+import { useEffect, useState } from "react";
 import {
   AsideContainer,
   LayoutGrid,
 } from "../../Components/Containers/Containers";
 import { LoginForm } from "../../Components/Forms/forms";
 
+
 export const LoginPage = () => {
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    googleId: ""
+  });
+
+  useEffect(() => {
+    console.log(user);
+  }, [user])
+
   return (
     <AsideContainer>
       <LayoutGrid style={"items-center"}>
-        {/* <h1 className="text-white uppercase text-3xl">Login</h1> */}
-
-        <LoginForm />
+        <LoginForm user={user} setUser={setUser} />
       </LayoutGrid>
     </AsideContainer>
   );
