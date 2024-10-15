@@ -3,6 +3,7 @@ using ChatNow_WebAPi.Infra;
 using ChatNow_WebAPi.Interfaces;
 using ChatNow_WebAPi.Utils;
 using ChatNow_WebAPi.ViewModels;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
 namespace ChatNow_WebAPi.Repositories
@@ -28,7 +29,7 @@ namespace ChatNow_WebAPi.Repositories
             bool userAlreadyRegistered = _context.Users.Any(u => u.Email == newUser.Email || u.GoogleId == newUser.GoogleId);
 
             // Se o usuário já estiver registrado, ou não tiver inserido o email ou GoogleId, retorna null
-            if (userAlreadyRegistered || (String.IsNullOrEmpty(newUser.Email) && String.IsNullOrEmpty(newUser.Password)) && String.IsNullOrEmpty(newUser.GoogleId))
+            if (userAlreadyRegistered || String.IsNullOrEmpty(newUser.Email) && String.IsNullOrEmpty(newUser.Password) && String.IsNullOrEmpty(newUser.GoogleId))
             {
                 return null;
             }
@@ -121,5 +122,11 @@ namespace ChatNow_WebAPi.Repositories
             //return null;
         }
 
+        public List<User>? ListAll()
+        {
+            var usersList = _context.Users.ToList();
+
+            return usersList.Count > 0 ? usersList: null;
+        }
     }
 }

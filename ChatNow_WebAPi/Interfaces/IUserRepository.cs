@@ -33,5 +33,7 @@ namespace ChatNow_WebAPi.Interfaces
         /// <param name="googleId">GoogleId inserted</param>
         /// <returns>NULL or Object User</returns>
         public User? SearchByGoogleId(string googleId);
+
+        public List<User>? ListAll();
     }
 }

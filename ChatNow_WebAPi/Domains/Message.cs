@@ -6,7 +6,7 @@ namespace ChatNow_WebAPi.Domains
     public class Message
     {
         [Key]
-        public Guid Id { get; set; } = new Guid();
+        public Guid Id { get; set; } = Guid.NewGuid();
 
         [ForeignKey(nameof(Conversation))]
         [Required(ErrorMessage = "O Id da Conversa(Conversation) é obrigatória!")]
@@ -25,6 +25,6 @@ namespace ChatNow_WebAPi.Domains
         public string? Content { get; set; }
 
         [Required(ErrorMessage = "O Horário do envio da mensagem é obrigatório!")]
-        public DateTime SentTime { get; set; } = DateTime.UtcNow;
+        public DateTime SentTime { get; private set; } = DateTime.UtcNow;
     }
 }

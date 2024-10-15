@@ -16,10 +16,10 @@ namespace ChatNow_WebAPi.Controllers
         public UserController() => _userRepository = new UserRepository();
 
         /// <summary>
-        /// Registers a new User in Db
+        /// Cadastra um novo User no Banco de Dados
         /// </summary>
-        /// <param name="insertedUser">Object of User type</param>
-        /// <returns>OK or BADREQUEST</returns>
+        /// <param name="insertedUser">Objeto do tipo User</param>
+        /// <returns>OK(Objeto User) or BADREQUEST</returns>
         [HttpPost]
         public IActionResult Post(User insertedUser)
         {
@@ -38,6 +38,11 @@ namespace ChatNow_WebAPi.Controllers
             }
         }
 
+        /// <summary>
+        /// Cadastra um novo User pelo GoogleId dele no Banco de Dados
+        /// </summary>
+        /// <param name="insertedUser">Objeto do tipo UserGoogleDto(Email, GoogleId)</param>
+        /// <returns>OK/BadRequest</returns>
 
         [HttpPost("CadastroComGoogle")]
         public IActionResult PostWithGoogle(UserGoogleDto insertedUser)
@@ -56,5 +61,28 @@ namespace ChatNow_WebAPi.Controllers
                 return BadRequest("Houve um erro: " + error);
             }
         }
+
+
+        /// <summary>
+        /// Lista todos os usuários salvos no Banco de Dados
+        /// </summary>
+        /// <returns>Lista de Users/BadRequest</returns>
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            try
+            {
+                var usersList = _userRepository.ListAll();
+
+                return usersList is null
+                    ? BadRequest("Não há nenhum usuário!")
+                    : Ok(usersList);
+            }
+            catch (Exception error)
+            {
+                return BadRequest(error.Message);
+            }
+        }
+
     }
 }

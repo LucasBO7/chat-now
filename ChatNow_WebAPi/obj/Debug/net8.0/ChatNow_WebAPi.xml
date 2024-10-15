@@ -6,17 +6,37 @@
     <members>
         <member name="M:ChatNow_WebAPi.Controllers.LoginController.Post(ChatNow_WebAPi.ViewModels.UserLoginEmailDto)">
             <summary>
-            Uses JWT Bearer Authentication to Login in an existent User account
+            Usa o JWT Bearer Authentication para Logar com Email em uma conta User existente no banco
             </summary>
-            <param name="insertedUser">Object of type UserLoginEmailDto (Email, Password)</param>
-            <returns>Ok/NotFound</returns>
+            <param name="insertedUser">Objeto do tipo UserLoginEmailDto (Email, Password)</param>
+            <returns>TokenJWT/NotFound</returns>
+        </member>
+        <member name="M:ChatNow_WebAPi.Controllers.LoginController.LoginWithGoogle(ChatNow_WebAPi.ViewModels.UserGoogleDto)">
+            <summary>
+            Usa JWT Bearer para logar-se em uma conta existente no banco com o google
+            </summary>
+            <param name="insertedUser"></param>
+            <returns>TokenJWT/NotFound</returns>
         </member>
         <member name="M:ChatNow_WebAPi.Controllers.UserController.Post(ChatNow_WebAPi.Domains.User)">
             <summary>
-            Registers a new User in Db
+            Cadastra um novo User no Banco de Dados
             </summary>
-            <param name="insertedUser">Object of User type</param>
-            <returns>OK or BADREQUEST</returns>
+            <param name="insertedUser">Objeto do tipo User</param>
+            <returns>OK(Objeto User) or BADREQUEST</returns>
+        </member>
+        <member name="M:ChatNow_WebAPi.Controllers.UserController.PostWithGoogle(ChatNow_WebAPi.ViewModels.UserGoogleDto)">
+            <summary>
+            Cadastra um novo User pelo GoogleId dele no Banco de Dados
+            </summary>
+            <param name="insertedUser">Objeto do tipo UserGoogleDto(Email, GoogleId)</param>
+            <returns>OK/BadRequest</returns>
+        </member>
+        <member name="M:ChatNow_WebAPi.Controllers.UserController.GetAll">
+            <summary>
+            Lista todos os usuários salvos no Banco de Dados
+            </summary>
+            <returns>Lista de Users/BadRequest</returns>
         </member>
         <member name="M:ChatNow_WebAPi.Interfaces.IUserRepository.Register(ChatNow_WebAPi.Domains.User)">
             <summary>
@@ -47,64 +67,16 @@
             <param name="googleId">GoogleId inserted</param>
             <returns>NULL or Object User</returns>
         </member>
-        <member name="T:ChatNow_WebAPi.Migrations.InitialCreate">
+        <member name="T:ChatNow_WebAPi.Migrations.RealteradoModelsEstrutura">
             <inheritdoc />
         </member>
-        <member name="M:ChatNow_WebAPi.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:ChatNow_WebAPi.Migrations.RealteradoModelsEstrutura.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:ChatNow_WebAPi.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:ChatNow_WebAPi.Migrations.RealteradoModelsEstrutura.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:ChatNow_WebAPi.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:ChatNow_WebAPi.Migrations.PropGoogleIdUser">
-            <inheritdoc />
-        </member>
-        <member name="M:ChatNow_WebAPi.Migrations.PropGoogleIdUser.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:ChatNow_WebAPi.Migrations.PropGoogleIdUser.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:ChatNow_WebAPi.Migrations.PropGoogleIdUser.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:ChatNow_WebAPi.Migrations.InsertedUserEmailProperty">
-            <inheritdoc />
-        </member>
-        <member name="M:ChatNow_WebAPi.Migrations.InsertedUserEmailProperty.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:ChatNow_WebAPi.Migrations.InsertedUserEmailProperty.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:ChatNow_WebAPi.Migrations.InsertedUserEmailProperty.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:ChatNow_WebAPi.Migrations.InsertedUserPasswordProperty">
-            <inheritdoc />
-        </member>
-        <member name="M:ChatNow_WebAPi.Migrations.InsertedUserPasswordProperty.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:ChatNow_WebAPi.Migrations.InsertedUserPasswordProperty.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:ChatNow_WebAPi.Migrations.InsertedUserPasswordProperty.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:ChatNow_WebAPi.Migrations.PropertyPasswordChangedLength">
-            <inheritdoc />
-        </member>
-        <member name="M:ChatNow_WebAPi.Migrations.PropertyPasswordChangedLength.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:ChatNow_WebAPi.Migrations.PropertyPasswordChangedLength.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:ChatNow_WebAPi.Migrations.PropertyPasswordChangedLength.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+        <member name="M:ChatNow_WebAPi.Migrations.RealteradoModelsEstrutura.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
         <member name="M:ChatNow_WebAPi.Repositories.UserRepository.Register(ChatNow_WebAPi.Domains.User)">

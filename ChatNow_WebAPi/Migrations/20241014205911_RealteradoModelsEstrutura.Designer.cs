@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChatNow_WebAPi.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20241013145625_PropGoogleIdUser")]
-    partial class PropGoogleIdUser
+    [Migration("20241014205911_RealteradoModelsEstrutura")]
+    partial class RealteradoModelsEstrutura
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,19 +31,35 @@ namespace ChatNow_WebAPi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("UserTwoId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
-
-                    b.HasIndex("UserTwoId");
-
                     b.ToTable("Conversations");
+                });
+
+            modelBuilder.Entity("ChatNow_WebAPi.Domains.Friendship", b =>
+                {
+                    b.Property<Guid>("IdFriendship")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IdUserOne")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IdUserTwo")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("StatusId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("IdFriendship");
+
+                    b.HasIndex("IdUserOne");
+
+                    b.HasIndex("IdUserTwo");
+
+                    b.HasIndex("StatusId");
+
+                    b.ToTable("Friendships");
                 });
 
             modelBuilder.Entity("ChatNow_WebAPi.Domains.Message", b =>
@@ -75,11 +91,31 @@ namespace ChatNow_WebAPi.Migrations
                     b.ToTable("Messages");
                 });
 
+            modelBuilder.Entity("ChatNow_WebAPi.Domains.Status", b =>
+                {
+                    b.Property<Guid>("IdStatus")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.HasKey("IdStatus");
+
+                    b.ToTable("Status");
+                });
+
             modelBuilder.Entity("ChatNow_WebAPi.Domains.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("GoogleId")
                         .HasMaxLength(256)
@@ -90,24 +126,67 @@ namespace ChatNow_WebAPi.Migrations
                         .HasMaxLength(24)
                         .HasColumnType("nvarchar(24)");
 
+                    b.Property<string>("Password")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PhotoUrl")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("ChatNow_WebAPi.Domains.Conversation", b =>
+            modelBuilder.Entity("ChatNow_WebAPi.Domains.UserConversation", b =>
+                {
+                    b.Property<Guid>("IdUserConversation")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("ConversationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IdConversation")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("IdUser")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("IdUserConversation");
+
+                    b.HasIndex("ConversationId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserConversation");
+                });
+
+            modelBuilder.Entity("ChatNow_WebAPi.Domains.Friendship", b =>
                 {
                     b.HasOne("ChatNow_WebAPi.Domains.User", "UserOne")
                         .WithMany()
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("IdUserOne")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ChatNow_WebAPi.Domains.User", "UserTwo")
                         .WithMany()
-                        .HasForeignKey("UserTwoId")
+                        .HasForeignKey("IdUserTwo")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.HasOne("ChatNow_WebAPi.Domains.Status", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Status");
 
                     b.Navigation("UserOne");
 
@@ -131,6 +210,21 @@ namespace ChatNow_WebAPi.Migrations
                     b.Navigation("Conversation");
 
                     b.Navigation("Sender");
+                });
+
+            modelBuilder.Entity("ChatNow_WebAPi.Domains.UserConversation", b =>
+                {
+                    b.HasOne("ChatNow_WebAPi.Domains.Conversation", "Conversation")
+                        .WithMany()
+                        .HasForeignKey("ConversationId");
+
+                    b.HasOne("ChatNow_WebAPi.Domains.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Conversation");
+
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

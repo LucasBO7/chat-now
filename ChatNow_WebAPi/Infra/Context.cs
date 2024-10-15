@@ -22,16 +22,16 @@ namespace ChatNow_WebAPi.Infra
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Conversation>()
+            modelBuilder.Entity<Friendship>()
                 .HasOne(c => c.UserOne)
                 .WithMany()
-                .HasForeignKey(c => c.UserId)
+                .HasForeignKey(c => c.IdUserOne)
                 .OnDelete(DeleteBehavior.Restrict); // ou NoAction
 
-            modelBuilder.Entity<Conversation>()
+            modelBuilder.Entity<Friendship>()
                 .HasOne(c => c.UserTwo)
                 .WithMany()
-                .HasForeignKey(c => c.UserTwoId)
+                .HasForeignKey(c => c.IdUserTwo)
                 .OnDelete(DeleteBehavior.Restrict); // ou NoAction
         }
 
@@ -39,5 +39,8 @@ namespace ChatNow_WebAPi.Infra
         public DbSet<User> Users { get; set; }
         public DbSet<Conversation> Conversations { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<Friendship> Friendships { get; set; }
+        public DbSet<Status> Status { get; set; }
+        public DbSet<UserConversation> UserConversation { get; set; }
     }
 }

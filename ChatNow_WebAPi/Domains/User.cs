@@ -12,6 +12,9 @@ namespace ChatNow_WebAPi.Domains
         public string? Name { get; set; }
 
         [StringLength(256)]
+        public string? PhotoUrl { get; set; }
+
+        [StringLength(256)]
         public string? Email { get; set; }
 
         [StringLength(256)]

@@ -23,10 +23,10 @@ namespace ChatNow_WebAPi.Controllers
         }
 
         /// <summary>
-        /// Uses JWT Bearer Authentication to Login in an existent User account
+        /// Usa o JWT Bearer Authentication para Logar com Email em uma conta User existente no banco
         /// </summary>
-        /// <param name="insertedUser">Object of type UserLoginEmailDto (Email, Password)</param>
-        /// <returns>Ok/NotFound</returns>
+        /// <param name="insertedUser">Objeto do tipo UserLoginEmailDto (Email, Password)</param>
+        /// <returns>TokenJWT/NotFound</returns>
         [HttpPost]
         public IActionResult Post(UserLoginEmailDto insertedUser)
         {
@@ -86,6 +86,11 @@ namespace ChatNow_WebAPi.Controllers
             }
         }
 
+        /// <summary>
+        /// Usa JWT Bearer para logar-se em uma conta existente no banco com o google
+        /// </summary>
+        /// <param name="insertedUser"></param>
+        /// <returns>TokenJWT/NotFound</returns>
         [HttpPost("LoginComGoogle")]
         public IActionResult? LoginWithGoogle(UserGoogleDto insertedUser)
         {
@@ -94,7 +99,7 @@ namespace ChatNow_WebAPi.Controllers
                 User searchedUser = _userRepository.SearchByGoogleId(insertedUser.GoogleId!)!;
 
                 if (searchedUser is null)
-                    return BadRequest("Usuário não encontrado!");
+                    return NotFound("Usuário não encontrado!");
 
                 // Caso encontre o usuário buscado, prossegue para a criação do Token
 
