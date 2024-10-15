@@ -1,6 +1,20 @@
-/*  */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Nunito";
+    src: url(assets/fonts/Nunito/Nunito-VariableFont_wght.ttf);
+  }
+
+  @font-face {
+    font-family: "Noto-Thai";
+    src: url(assets/fonts/Noto_Sans_Thai/NotoSansThai-VariableFont_wdth\wght.ttf);
+  }
+
+  @font-face {
+    font-family: "Noto-Kannada";
+    src: url(assets/fonts/Noto_Serif_Kannada/NotoSerifKannada-VariableFont_wght.ttf);
+  }
 }

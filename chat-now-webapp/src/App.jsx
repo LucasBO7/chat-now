@@ -1,9 +1,6 @@
-import "./App.css";
+import { Button } from "@material-tailwind/react";
+import { Rotas } from "./routes";
 
 export const App = () => {
-  return (
-    <>
-      <h1>Chat Now</h1>
-    </>
-  );
+  return <Rotas />;
 };
