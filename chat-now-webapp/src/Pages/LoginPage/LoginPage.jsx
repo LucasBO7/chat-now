@@ -4,6 +4,7 @@ import {
   LayoutGrid,
 } from "../../Components/Containers/Containers";
 import { LoginForm } from "../../Components/Forms/forms";
+import api from "../../Services/Service";
 
 
 export const LoginPage = () => {
@@ -15,14 +16,35 @@ export const LoginPage = () => {
     googleId: ""
   });
 
-  useEffect(() => {
-    console.log(user);
-  }, [user])
+  const signInUser = async (event) => {
+    event.preventDefault();
+
+    await api.post("Login", {
+      email: user.email,
+      password: user.password
+    })
+      .then(response => console.log(response))
+      .catch(error => alert(error));
+  }
+
+  const signInWithGoogle = async () => {
+    await api.post("Login/LoginComGoogle", {
+      name: user.name,
+      googleId: user.googleId
+    })
+      .then(response => console.log(response))
+      .catch(error => console.log(error));
+  }
 
   return (
     <AsideContainer>
       <LayoutGrid style={"items-center"}>
-        <LoginForm user={user} setUser={setUser} />
+        <LoginForm
+          signInWithGoogle={signInWithGoogle}
+          onSubmit={signInUser}
+          user={user}
+          setUser={setUser}
+        />
       </LayoutGrid>
     </AsideContainer>
   );

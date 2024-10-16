@@ -9,7 +9,7 @@ import {
 import { GoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
 
-export const LoginForm = ({ user, setUser }) => {
+export const LoginForm = ({ onSubmit, signInWithGoogle, user, setUser }) => {
   const navigate = useNavigate();
 
   return (
@@ -30,8 +30,9 @@ export const LoginForm = ({ user, setUser }) => {
           Logue-se por email ou autenticação com Google!
         </Typography>
       </CardHeader>
+
       <CardBody>
-        <form action="#" className="flex flex-col gap-4 md:mt-12">
+        <form onSubmit={onSubmit} className="flex flex-col gap-4 md:mt-12">
           {/* Email Input */}
           <div>
             <label htmlFor="email">
@@ -97,7 +98,7 @@ export const LoginForm = ({ user, setUser }) => {
           </Typography>
 
           {/* Login EMAIL */}
-          <Button size="lg" className="bg-light-purple mt-10" fullWidth>
+          <Button size="lg" className="bg-light-purple mt-10" fullWidth type="submit">
             continue
           </Button>
 
@@ -105,6 +106,8 @@ export const LoginForm = ({ user, setUser }) => {
           <GoogleLogin
             onSuccess={credentialResponse => {
               setUser({ ...user, googleId: credentialResponse.credential });
+              console.log(credentialResponse);
+              signInWithGoogle();
             }}
             onError={() => {
               alert('Login Failed');
@@ -131,7 +134,7 @@ export const LoginForm = ({ user, setUser }) => {
   );
 };
 
-export const RegisterForm = ({ user, setUser }) => {
+export const RegisterForm = ({ user, signUpWithGoogle, setUser, signUpUser }) => {
   const navigate = useNavigate();
 
   return (
@@ -152,8 +155,9 @@ export const RegisterForm = ({ user, setUser }) => {
           Logue-se por email ou autenticação com Google!
         </Typography>
       </CardHeader>
+
       <CardBody>
-        <form action="#" className="flex flex-col gap-4 md:mt-12">
+        <form onSubmit={signUpUser} className="flex flex-col gap-4 md:mt-12">
           {/* Nome Input */}
           <div>
             <label htmlFor="name">
@@ -260,7 +264,7 @@ export const RegisterForm = ({ user, setUser }) => {
           </Typography>
 
           {/* Login EMAIL */}
-          <Button size="lg" className="bg-light-purple mt-10" fullWidth>
+          <Button size="lg" className="bg-light-purple mt-10" fullWidth type="submit">
             continue
           </Button>
 
@@ -268,6 +272,7 @@ export const RegisterForm = ({ user, setUser }) => {
           <GoogleLogin
             onSuccess={credentialResponse => {
               setUser({ ...user, googleId: credentialResponse.credential });
+              signUpWithGoogle();
             }}
             onError={() => {
               alert('Login Failed');
