@@ -26,7 +26,7 @@ namespace ChatNow_WebAPi.Repositories
         {
             #region Validação - Se existe - Se tem valor
             // Verifica se há algum Usuário com Email ou GoogleId igual
-            bool userAlreadyRegistered = _context.Users.Any(u => u.Email == newUser.Email || u.GoogleId == newUser.GoogleId);
+            bool userAlreadyRegistered = _context.Users.Any(u => u.Email == newUser.Email);
 
             // Se o usuário já estiver registrado, ou não tiver inserido o email ou GoogleId, retorna null
             if (userAlreadyRegistered || String.IsNullOrEmpty(newUser.Email) && String.IsNullOrEmpty(newUser.Password) && String.IsNullOrEmpty(newUser.GoogleId))

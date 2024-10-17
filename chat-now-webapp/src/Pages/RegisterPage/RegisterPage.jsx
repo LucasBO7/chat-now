@@ -9,31 +9,41 @@ import api from "../../Services/Service";
 export const RegisterPage = () => {
   const [user, setUser] = useState({
     name: "",
+    photoUrl: null,
     email: "",
     password: "",
     confirmPassword: "",
-    googleId: ""
+    googleId: "",
   });
 
   const signUpUser = async (event) => {
     event.preventDefault();
 
-    await api.post("User", { user })
-      .then(response => console.log(response))
-      .catch(error => alert(error));
-  }
+    await api
+      .post("User/CadastroEmail", {
+        name: user.name,
+        photoUrl: null,
+        email: user.email,
+        password: user.password,
+        googleId: null,
+      })
+      .then((response) => console.log(`FUNCIONOU! ${response}`))
+      .catch((error) => alert(error));
+  };
 
-  const signUpWithGoogle = async (event) => {
-    event.preventDefault();
+  const signUpWithGoogle = async () => {
+    await api
+      .post("User/CadastroComGoogle", {
+        name: user.name,
+        googleId: user.googleId,
+      })
+      .then((response) => console.log(`FUNCIONOU! ${response}`))
+      .catch((error) => console.log(error));
+  };
 
-    await api.post("User/CadastroComGoogle", {
-      name: user.name,
-      googleId: user.googleId
-    })
-      .then(response => console.log(response))
-      .catch(error => console.log(error));
-
-  }
+  // useEffect(() => {
+  //   console.log(user);
+  // }, [user]);
 
   return (
     <AsideContainer>

@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 
 export const LoginForm = ({ onSubmit, signInWithGoogle, user, setUser }) => {
@@ -98,19 +99,27 @@ export const LoginForm = ({ onSubmit, signInWithGoogle, user, setUser }) => {
           </Typography>
 
           {/* Login EMAIL */}
-          <Button size="lg" className="bg-light-purple mt-10" fullWidth type="submit">
+          <Button
+            size="lg"
+            className="bg-light-purple mt-10"
+            fullWidth
+            type="submit"
+          >
             continue
           </Button>
 
           {/* Login com Google */}
           <GoogleLogin
-            onSuccess={credentialResponse => {
-              setUser({ ...user, googleId: credentialResponse.credential });
-              console.log(credentialResponse);
+            onSuccess={(credentialResponse) => {
+              setUser({
+                ...user,
+                googleId: credentialResponse.credential,
+              });
+
               signInWithGoogle();
             }}
             onError={() => {
-              alert('Login Failed');
+              alert("Login Failed");
             }}
           />
 
@@ -134,8 +143,24 @@ export const LoginForm = ({ onSubmit, signInWithGoogle, user, setUser }) => {
   );
 };
 
-export const RegisterForm = ({ user, signUpWithGoogle, setUser, signUpUser }) => {
+export const RegisterForm = ({
+  user,
+  signUpWithGoogle,
+  setUser,
+  signUpUser,
+}) => {
   const navigate = useNavigate();
+
+  // const handleGoogleSubmit = ({ credentialResponse }) => {
+  //   const objReturn = jwtDecode(credentialResponse.credential);
+  //   setUser({
+  //     ...user,
+  //     googleId: credentialResponse.credential,
+  //     name: objReturn.given_name,
+  //   });
+
+  //   signUpWithGoogle();
+  // };
 
   return (
     <Card shadow={false} className="md:px-24 md:py-14 py-8 bg-transparent">
@@ -264,20 +289,41 @@ export const RegisterForm = ({ user, signUpWithGoogle, setUser, signUpUser }) =>
           </Typography>
 
           {/* Login EMAIL */}
-          <Button size="lg" className="bg-light-purple mt-10" fullWidth type="submit">
+          <Button
+            size="lg"
+            className="bg-light-purple mt-10"
+            fullWidth
+            type="submit"
+          >
             continue
           </Button>
 
           {/* Login com o Google */}
           <GoogleLogin
-            onSuccess={credentialResponse => {
-              setUser({ ...user, googleId: credentialResponse.credential });
+            onSuccess={(credentialResponse) => {
+              const objReturn = jwtDecode(credentialResponse.credential);
+              setUser({
+                ...user,
+                name: objReturn.given_name,
+                photoUrl: objReturn.picture,
+                googleId: credentialResponse.credential,
+              });
+
               signUpWithGoogle();
             }}
             onError={() => {
-              alert('Login Failed');
+              alert("Login Failed");
             }}
           />
+
+          {/* <GoogleLogin
+            onSuccess={(credentialResponse) => {
+              handleGoogleSubmit(credentialResponse);
+            }}
+            onError={() => {
+              alert("Login Failed");
+            }}
+          /> */}
 
           {/* Message */}
           <Typography

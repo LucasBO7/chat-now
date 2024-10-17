@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChatNow_WebAPi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0de29c54933d2f4c8b4abb60a3029b0a4d4bb83e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ceb6714883836f46b704d92e41b9838a5e2bb0eb")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChatNow_WebAPi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChatNow_WebAPi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

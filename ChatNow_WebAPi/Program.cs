@@ -6,7 +6,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
 builder.Services.AddControllers();
+
 // Adiciona serviço de autenticação JWT Bearer
 builder.Services.AddAuthentication(options =>
 {
@@ -99,9 +110,9 @@ if (app.Environment.IsDevelopment())
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
         options.RoutePrefix = "swagger";
     });
-
 }
 
+app.UseCors("AllowAllOrigins");
 app.UseHttpsRedirection();
 
 // Usar autenticação

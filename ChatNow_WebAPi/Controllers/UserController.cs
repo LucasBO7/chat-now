@@ -20,7 +20,7 @@ namespace ChatNow_WebAPi.Controllers
         /// </summary>
         /// <param name="insertedUser">Objeto do tipo User</param>
         /// <returns>OK(Objeto User) or BADREQUEST</returns>
-        [HttpPost]
+        [HttpPost("CadastroEmail")]
         public IActionResult Post(User insertedUser)
         {
             try

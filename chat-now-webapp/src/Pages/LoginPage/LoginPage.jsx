@@ -6,35 +6,42 @@ import {
 import { LoginForm } from "../../Components/Forms/forms";
 import api from "../../Services/Service";
 
-
 export const LoginPage = () => {
   const [user, setUser] = useState({
     name: "",
     email: "",
     password: "",
     confirmPassword: "",
-    googleId: ""
+    googleId: "",
   });
 
   const signInUser = async (event) => {
     event.preventDefault();
 
-    await api.post("Login", {
-      email: user.email,
-      password: user.password
-    })
-      .then(response => console.log(response))
-      .catch(error => alert(error));
-  }
+    await api
+      .post("Login", {
+        email: user.email,
+        password: user.password,
+      })
+      .then((response) => console.log(`FUNCIONOU! ${response}`))
+      .catch((error) => alert(error));
+  };
 
-  const signInWithGoogle = async () => {
-    await api.post("Login/LoginComGoogle", {
-      name: user.name,
-      googleId: user.googleId
-    })
-      .then(response => console.log(response))
-      .catch(error => console.log(error));
-  }
+  const signInWithGoogle = async (event) => {
+    event.preventDefault();
+
+    await api
+      .post("Login/LoginComGoogle", {
+        name: user.name,
+        googleId: user.googleId,
+      })
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
 
   return (
     <AsideContainer>
