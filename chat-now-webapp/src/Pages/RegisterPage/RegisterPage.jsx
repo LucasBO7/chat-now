@@ -41,10 +41,6 @@ export const RegisterPage = () => {
       .catch((error) => console.log(error));
   };
 
-  // useEffect(() => {
-  //   console.log(user);
-  // }, [user]);
-
   return (
     <AsideContainer>
       <LayoutGrid style={"items-center"}>
