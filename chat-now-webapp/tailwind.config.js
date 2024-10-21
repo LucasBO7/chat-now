@@ -1,6 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-const withMt = require("@material-tailwind/react/utils/withMT");
+import withMt from "@material-tailwind/react/utils/withMT";
 
+/** @type {import('tailwindcss').Config} */
 export default withMt({
   content: ["./src/**/*.{jsx,js}", "./index.html"],
   theme: {

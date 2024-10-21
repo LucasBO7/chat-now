@@ -1,0 +1,69 @@
+{
+    "Users": [
+        {
+            "IdUser": 1,
+            "Name": "Alice",
+            "Email": "alice@example.com",
+            "ImgUrl": "https://example.com/alice.jpg",
+            "GoogleId": "123456789"
+        },
+        {
+            "IdUser": 2,
+            "Name": "Bob",
+            "Email": "bob@example.com",
+            "ImgUrl": "https://example.com/bob.jpg",
+            "GoogleId": "987654321"
+        }
+    ],
+    "Friendships": [
+        {
+            "IdFriendship": 1,
+            "IdUserOne": 1,
+            "IdUserTwo": 2,
+            "IdStatus": 1
+        }
+    ],
+    "Status": [
+        {
+            "IdStatus": 1,
+            "Type": "accepted"
+        },
+        {
+            "IdStatus": 2,
+            "Type": "pending"
+        }
+    ],
+    "Conversations": [
+        {
+            "IdConversation": 1
+        }
+    ],
+    "UserConversations": [
+        {
+            "IdUserConversation": 1,
+            "IdUser": 1,
+            "IdConversation": 1
+        },
+        {
+            "IdUserConversation": 2,
+            "IdUser": 2,
+            "IdConversation": 1
+        }
+    ],
+    "Messages": [
+        {
+            "IdMessage": 1,
+            "IdUser": 1,
+            "IdConversation": 1,
+            "Content": "Hello, Bob!",
+            "SentTime": "2024-10-20T10:00:00Z"
+        },
+        {
+            "IdMessage": 2,
+            "IdUser": 2,
+            "IdConversation": 1,
+            "Content": "Hi, Alice!",
+            "SentTime": "2024-10-20T10:01:00Z"
+        }
+    ]
+}

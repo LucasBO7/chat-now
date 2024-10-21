@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { LoginPage } from "./Pages/LoginPage/LoginPage";
 import { RegisterPage } from "./Pages/RegisterPage/RegisterPage";
-import { HomePage } from "./Pages/Home/Home";
+import { HomePage } from "./Pages/Home/HomePage";
 
 export const Rotas = () => {
   return (
