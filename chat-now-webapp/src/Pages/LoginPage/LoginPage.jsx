@@ -26,13 +26,17 @@ export const LoginPage = () => {
         password: user.password,
       })
       .then((response) => {
+        // Salva o usuário logado juntamente ao seu token de autenticação no localstorage
         saveUserLocalStorage(response.data);
+        // Feedback visual de processo concluído
         alert("Salvo!");
+        // Redireciona para a tela Home
         navigate("/home");
       })
       .catch((error) => alert(error));
   };
 
+  // Salva os dados do usuário no localstorage
   const saveUserLocalStorage = (userData) => {
     localStorage.setItem("user", JSON.stringify(userData));
   };

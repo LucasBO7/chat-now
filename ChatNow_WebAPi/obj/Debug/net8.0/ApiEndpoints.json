@@ -1,0 +1,161 @@
+[
+  {
+    "ContainingType": "ChatNow_WebAPi.Controllers.FriendshipController",
+    "Method": "Post",
+    "RelativePath": "api/Friendship",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "actualUser",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "receiverUser",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChatNow_WebAPi.Controllers.FriendshipController",
+    "Method": "GetAllFriend",
+    "RelativePath": "api/Friendship/Amigos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUser",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChatNow_WebAPi.Controllers.FriendshipController",
+    "Method": "Delete",
+    "RelativePath": "api/Friendship/RemoverAmigo",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idFriendship",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChatNow_WebAPi.Controllers.LoginController",
+    "Method": "Post",
+    "RelativePath": "api/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insertedUser",
+        "Type": "ChatNow_WebAPi.ViewModels.UserLoginEmailDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChatNow_WebAPi.Controllers.LoginController",
+    "Method": "LoginWithGoogle",
+    "RelativePath": "api/Login/LoginComGoogle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insertedUser",
+        "Type": "ChatNow_WebAPi.ViewModels.UserGoogleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChatNow_WebAPi.Controllers.MessageController",
+    "Method": "Post",
+    "RelativePath": "api/Message",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insertedMessage",
+        "Type": "ChatNow_WebAPi.ViewModels.MessageRegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChatNow_WebAPi.Controllers.MessageController",
+    "Method": "Get",
+    "RelativePath": "api/Message/ChatMessages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idConversation",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChatNow_WebAPi.Controllers.UserController",
+    "Method": "GetAll",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChatNow_WebAPi.Controllers.UserController",
+    "Method": "PostWithGoogle",
+    "RelativePath": "api/User/CadastroComGoogle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insertedUser",
+        "Type": "ChatNow_WebAPi.ViewModels.UserGoogleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChatNow_WebAPi.Controllers.UserController",
+    "Method": "Post",
+    "RelativePath": "api/User/CadastroEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insertedUser",
+        "Type": "ChatNow_WebAPi.Domains.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

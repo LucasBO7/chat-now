@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj": {}
+    "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj": {
+    "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj",
+        "projectUniqueName": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj",
         "projectName": "ChatNow_WebAPi",
-        "projectPath": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj",
-        "packagesPath": "C:\\Users\\Batata Voadora\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\obj\\",
+        "projectPath": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Batata Voadora\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -100,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

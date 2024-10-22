@@ -16,7 +16,7 @@ namespace ChatNow_WebAPi.Infra
             // Se NÃO estiver configurado
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-84UMQCT\\SQLEXPRESS; initial catalog=chatnow; User Id=sa; pwd=Senai@134; TrustServerCertificate = true;");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-8TTSKB5; initial catalog=chatnow; User Id=sa; pwd=sa1234; TrustServerCertificate = true;");
             }
         }
 

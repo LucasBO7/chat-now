@@ -4,13 +4,15 @@
             "IdUser": 1,
             "Name": "Alice",
             "Email": "alice@example.com",
+            "Password": "123",
             "ImgUrl": "https://example.com/alice.jpg",
             "GoogleId": "123456789"
         },
         {
             "IdUser": 2,
-            "Name": "Bob",
-            "Email": "bob@example.com",
+            "Name": "Lucas",
+            "Email": "lucas@gmail.com",
+            "Password": "1234",
             "ImgUrl": "https://example.com/bob.jpg",
             "GoogleId": "987654321"
         }

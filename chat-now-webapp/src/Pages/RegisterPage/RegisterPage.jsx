@@ -5,8 +5,10 @@ import {
 } from "../../Components/Containers/Containers";
 import { RegisterForm } from "../../Components/Forms/forms";
 import api from "../../Services/Service";
+import { useNavigation } from "react-router-dom";
 
 export const RegisterPage = () => {
+  const navigate = useNavigation();
   const [user, setUser] = useState({
     name: "",
     photoUrl: null,
@@ -27,7 +29,10 @@ export const RegisterPage = () => {
         password: user.password,
         googleId: null,
       })
-      .then((response) => console.log(`FUNCIONOU! ${response}`))
+      .then((response) => {
+        alert("Usuário cadastrado com sucesso!");
+        navigate("/login");
+      })
       .catch((error) => alert(error));
   };
 
