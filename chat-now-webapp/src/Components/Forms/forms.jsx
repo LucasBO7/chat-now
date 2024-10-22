@@ -55,8 +55,8 @@ export const LoginForm = ({ onSubmit, signInWithGoogle, user, setUser }) => {
               labelProps={{
                 className: "hidden",
               }}
-              value={user.name}
-              onChange={(txt) => setUser({ ...user, name: txt.target.value })}
+              value={user.email}
+              onChange={(txt) => setUser({ ...user, email: txt.target.value })}
             />
           </div>
 

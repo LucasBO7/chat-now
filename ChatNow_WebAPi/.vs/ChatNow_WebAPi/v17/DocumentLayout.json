@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Batata Voadora\\Documents\\chat-now\\ChatNow_WebAPi\\",
+  "WorkspaceRootPath": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\batata voadora\\documents\\chat-now\\chatnow_webapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\batata voadora\\desktop\\chat-now\\chatnow_webapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\batata voadora\\documents\\chat-now\\chatnow_webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\batata voadora\\desktop\\chat-now\\chatnow_webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\batata voadora\\documents\\chat-now\\chatnow_webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\batata voadora\\desktop\\chat-now\\chatnow_webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -40,11 +40,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Batata Voadora\\Documents\\chat-now\\ChatNow_WebAPi\\Repositories\\UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\Batata Voadora\\Documents\\chat-now\\ChatNow_WebAPi\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\UserRepository.cs",
               "RelativeToolTip": "Repositories\\UserRepository.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwB8AAABWAAAA",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAIwGgAAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T00:33:17.918Z",
               "EditorCaption": ""
@@ -53,27 +53,25 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Batata Voadora\\Documents\\chat-now\\ChatNow_WebAPi\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Batata Voadora\\Documents\\chat-now\\ChatNow_WebAPi\\Program.cs",
+              "ToolTip": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAGoAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T01:08:06.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T01:08:06.669Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Batata Voadora\\Documents\\chat-now\\ChatNow_WebAPi\\Controllers\\UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Batata Voadora\\Documents\\chat-now\\ChatNow_WebAPi\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAA1wBgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T00:58:13.076Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T00:58:13.076Z"
             }
           ]
         }

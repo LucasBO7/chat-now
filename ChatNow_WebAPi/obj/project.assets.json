@@ -4282,11 +4282,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Batata Voadora\\Documents\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj",
+      "projectUniqueName": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj",
       "projectName": "ChatNow_WebAPi",
-      "projectPath": "C:\\Users\\Batata Voadora\\Documents\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj",
+      "projectPath": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\ChatNow_WebAPi.csproj",
       "packagesPath": "C:\\Users\\Batata Voadora\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Batata Voadora\\Documents\\chat-now\\ChatNow_WebAPi\\obj\\",
+      "outputPath": "C:\\Users\\Batata Voadora\\Desktop\\chat-now\\ChatNow_WebAPi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

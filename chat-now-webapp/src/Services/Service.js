@@ -5,7 +5,7 @@ const localApi = `http://localhost:${apiPort}/api/`;
 const jsonServerApi = `http://localhost:3000/`;
 
 const api = axios.create({
-  baseURL: jsonServerApi,
+  baseURL: localApi,
 });
 
 export default api;

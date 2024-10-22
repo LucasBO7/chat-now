@@ -5,8 +5,10 @@ import {
 } from "../../Components/Containers/Containers";
 import { LoginForm } from "../../Components/Forms/forms";
 import api from "../../Services/Service";
+import { useNavigate } from "react-router-dom";
 
 export const LoginPage = () => {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -23,8 +25,16 @@ export const LoginPage = () => {
         email: user.email,
         password: user.password,
       })
-      .then((response) => console.log(`FUNCIONOU! ${response}`))
+      .then((response) => {
+        saveUserLocalStorage(response.data);
+        alert("Salvo!");
+        navigate("/home");
+      })
       .catch((error) => alert(error));
+  };
+
+  const saveUserLocalStorage = (userData) => {
+    localStorage.setItem("user", JSON.stringify(userData));
   };
 
   const signInWithGoogle = async (event) => {
