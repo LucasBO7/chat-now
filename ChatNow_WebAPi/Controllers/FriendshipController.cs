@@ -21,7 +21,7 @@ namespace ChatNow_WebAPi.Controllers
             try
             {
                 _friendshipRepository.AddFriend(actualUser, receiverUser);
-                return Ok("Novo amigo adicionado com sucesso!");    
+                return Ok("Novo amigo adicionado com sucesso!");
             }
             catch (Exception error)
             {

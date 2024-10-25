@@ -77,6 +77,7 @@ namespace ChatNow_WebAPi.Controllers
                 // 5 - Retornar o token
                 return Ok(new
                 {
+                    User = searchedUser,
                     token = new JwtSecurityTokenHandler().WriteToken(token)
                 });
             }

@@ -3,6 +3,7 @@ using ChatNow_WebAPi.Infra;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.Intrinsics.X86;
 using System;
+using ChatNow_WebAPi.ViewModels;
 
 namespace ChatNow_WebAPi.Repositories
 {
@@ -23,7 +24,7 @@ namespace ChatNow_WebAPi.Repositories
             {
                 IdUserOne = idActualUser,
                 IdUserTwo = idPendentUser,
-                StatusId = Guid.Parse("14A343A9-A6AC-4845-BB24-D5561BA7983D"),
+                StatusId = Guid.Parse("C653E1B0-DBC2-417D-AEE6-32EE4F2E0C01"),
             };
 
             // Filtra as Friendships para verificar se existe uma com os mesmos usuário
@@ -84,23 +85,57 @@ namespace ChatNow_WebAPi.Repositories
             _context.SaveChanges();
         }
 
-        public List<Friendship>? ListAllFriends(Guid idUser)
+        public List<FriendsListDto>? ListAllFriends(Guid idUser)
         {
             List<Friendship> friendsList = _context.Friendships
                 .Where(f => f.IdUserOne == idUser || f.IdUserTwo == idUser)
                 .Include(f => f.UserOne)
                 .Include(f => f.UserTwo)
+                .Include(f => f.Status)
                 .ToList();
+
+            List<FriendsListDto> formattedFriendsList = new();
 
             foreach (var friendship in friendsList)
             {
+                // Se o Usuário que pesquisou for UserOne
                 if (friendship.IdUserOne == idUser)
-                    friendship.UserOne = null;
+                {
+                    // Salva o UserTwo formatado
+                    formattedFriendsList.Add(new FriendsListDto
+                    {
+                        IdFriendship = friendship.IdFriendship,
+                        Status = friendship.Status,
+                        // Dados do usuário
+                        IdUser = friendship.UserTwo!.Id,
+                        Name = friendship.UserTwo.Name,
+                        Email = friendship.UserTwo.Email,
+                        Password = friendship.UserTwo.Password,
+                        GoogleId = friendship.UserTwo.GoogleId,
+                        PhotoUrl = friendship.UserTwo.PhotoUrl
+                    });
+                }
+
+                // Se o usuário que pesquisou for UserTwo
                 if (friendship.IdUserTwo == idUser)
-                    friendship.UserTwo = null;
+                {
+                    // Salva o UserOne formatado
+                    formattedFriendsList.Add(new FriendsListDto
+                    {
+                        IdFriendship = friendship.IdFriendship,
+                        Status = friendship.Status,
+                        // Dados do usuário
+                        IdUser = friendship.UserOne!.Id,
+                        Name = friendship.UserOne.Name,
+                        Email = friendship.UserOne.Email,
+                        Password = friendship.UserOne.Password,
+                        GoogleId = friendship.UserOne.GoogleId,
+                        PhotoUrl = friendship.UserOne.PhotoUrl
+                    });
+                }
             }
 
-            return friendsList.Count > 0 ? friendsList : null; // Retorna null se a lista estiver vazia
+            return formattedFriendsList.Count > 0 ? formattedFriendsList : null; // Retorna null se a lista estiver vazia
         }
     }
 }

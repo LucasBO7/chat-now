@@ -5,10 +5,10 @@ import {
 } from "../../Components/Containers/Containers";
 import { RegisterForm } from "../../Components/Forms/forms";
 import api from "../../Services/Service";
-import { useNavigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const RegisterPage = () => {
-  const navigate = useNavigation();
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     name: "",
     photoUrl: null,

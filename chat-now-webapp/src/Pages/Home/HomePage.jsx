@@ -10,29 +10,24 @@ import { TextInput } from "../../Components/Inputs/inputs";
 import api from "../../Services/Service";
 
 export const HomePage = () => {
-  const loggedUser = localStorage.getItem("user");
-  const [chatUsers, setChatUsers] = useState(null);
+  const [loggedUser, setLoggedUser] = useState(JSON.parse(localStorage.getItem("user")));
+  const [chatUsers, setChatUsers] = useState([]);
+  const [conversations, setConversations] = useState([]);
   const [searchUser, setSearchUser] = useState("");
 
   const getAllChats = async () => {
-    await api
-      .get("Users")
-      .then((response) => setChatUsers(response.data))
-      .catch((error) => console.log(error));
+    await api.get(`Friendship/Amigos?idUser=${loggedUser.user.id}`)
+      .then(response => setChatUsers(response.data))
+      .catch(error => alert(error));
   };
 
   useEffect(() => {
     getAllChats();
   }, []);
 
-  useEffect(() => {
-    console.log("usuário");
-    console.log(loggedUser);
-  }, [loggedUser]);
-
   return (
     <AsideContainer>
-      <Header userName={"LBO"} />
+      <Header userName={loggedUser.user && loggedUser.user.name} />
 
       <LayoutGrid style={"flex-col !justify-start items-center mt-10"}>
         <TextInput
@@ -48,9 +43,10 @@ export const HomePage = () => {
               .filter(
                 (user) =>
                   user &&
-                  user.Name.toLowerCase().includes(searchUser.toLowerCase())
+                  user.name.toLowerCase().includes(searchUser.toLowerCase())
               )
-              .map((user, index) => <Card key={index} userName={user.Name} />)}
+              .map((user, index) => <Card key={index} userName={user.name} />)
+          }
         </CardsContainer>
       </LayoutGrid>
     </AsideContainer>

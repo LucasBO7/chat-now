@@ -28,6 +28,8 @@ export const LoginPage = () => {
       .then((response) => {
         // Salva o usuário logado juntamente ao seu token de autenticação no localstorage
         saveUserLocalStorage(response.data);
+        console.log(response.data);
+        
         // Feedback visual de processo concluído
         alert("Salvo!");
         // Redireciona para a tela Home

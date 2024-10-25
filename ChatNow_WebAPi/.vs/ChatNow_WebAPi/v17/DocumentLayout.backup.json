@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\infra\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:infra\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\domains\\friendship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:domains\\friendship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,8 +15,8 @@
       "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\controllers\\friendshipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:controllers\\friendshipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,14 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Context.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Infra\\Context.cs",
-              "RelativeDocumentMoniker": "Infra\\Context.cs",
-              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Infra\\Context.cs",
-              "RelativeToolTip": "Infra\\Context.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Title": "Friendship.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Domains\\Friendship.cs",
+              "RelativeDocumentMoniker": "Domains\\Friendship.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Domains\\Friendship.cs",
+              "RelativeToolTip": "Domains\\Friendship.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA1wBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T01:51:20.604Z",
+              "WhenOpened": "2024-10-25T00:45:58.613Z",
               "EditorCaption": ""
             },
             {
@@ -49,22 +49,9 @@
               "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
               "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\UserRepository.cs",
               "RelativeToolTip": "Repositories\\UserRepository.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwCUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAAH0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T00:33:17.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T01:08:06.669Z",
+              "WhenOpened": "2024-10-25T00:14:03.304Z",
               "EditorCaption": ""
             },
             {
@@ -75,9 +62,22 @@
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAkwEoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T00:58:13.076Z",
+              "WhenOpened": "2024-10-25T00:44:52.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FriendshipController.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\FriendshipController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FriendshipController.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\FriendshipController.cs",
+              "RelativeToolTip": "Controllers\\FriendshipController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T00:12:00.414Z",
               "EditorCaption": ""
             }
           ]
