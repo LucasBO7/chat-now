@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa6";
+import PropTypes from "prop-types";
 
 export const Card = ({ userImg, userName, lastMessage }) => {
     return (
@@ -24,7 +25,7 @@ export const UserCard = ({ user, handleDelete, handleAddFriend, isFriend = false
                 <p className="font-NotoThai font-bold text-sm">{user.name}</p>
             </div>
 
-            <button className="" onClick={isFriend === true ? handleDelete : () => handleAddFriend(user.id)}>
+            <button className="" onClick={() => isFriend === true ? handleDelete(user.idFriendship) : handleAddFriend(user.id)}>
                 {
                     isFriend === true
                         ? (<FaRegTrashAlt />)
@@ -33,4 +34,11 @@ export const UserCard = ({ user, handleDelete, handleAddFriend, isFriend = false
             </button>
         </div>
     );
+}
+
+UserCard.prototype = {
+    user: PropTypes.object.isRequired,
+    handleDelete: PropTypes.func,
+    handleAddFriend: PropTypes.func,
+    isFriend: PropTypes.bool
 }

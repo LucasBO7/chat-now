@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\repositories\\friendshiprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:repositories\\friendshiprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\controllers\\friendshipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:controllers\\friendshipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\domains\\conversation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:domains\\conversation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\domains\\friendship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:domains\\friendship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\controllers\\friendshipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:controllers\\friendshipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,19 +39,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FriendshipRepository.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\FriendshipRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\FriendshipRepository.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\FriendshipRepository.cs",
+              "RelativeToolTip": "Repositories\\FriendshipRepository.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAwFMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T00:16:42.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Conversation.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Domains\\Conversation.cs",
+              "RelativeDocumentMoniker": "Domains\\Conversation.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Domains\\Conversation.cs",
+              "RelativeToolTip": "Domains\\Conversation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T01:15:14.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Friendship.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Domains\\Friendship.cs",
               "RelativeDocumentMoniker": "Domains\\Friendship.cs",
               "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Domains\\Friendship.cs",
               "RelativeToolTip": "Domains\\Friendship.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA1wBQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-25T00:45:58.613Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
@@ -56,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
@@ -64,18 +98,17 @@
               "RelativeToolTip": "Controllers\\UserController.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAkwEoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T00:44:52.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T00:44:52.255Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "FriendshipController.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\FriendshipController.cs",
               "RelativeDocumentMoniker": "Controllers\\FriendshipController.cs",
               "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\FriendshipController.cs",
               "RelativeToolTip": "Controllers\\FriendshipController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAA1wBYAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-25T00:12:00.414Z",
               "EditorCaption": ""

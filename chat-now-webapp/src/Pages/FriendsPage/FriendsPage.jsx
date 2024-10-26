@@ -16,21 +16,29 @@ export const FriendsPage = () => {
     const [usersList, setUsersList] = useState(null);
 
     const handleFilterChange = () => {
-        filterFriends
+        filterFriends === true
             ? getFriends()
             : getUsers();
 
         filterFriends ? setFilterFriends(false) : setFilterFriends(true);
     }
 
-    const handleDelete = () => {
-        alert("Deletar");
+    const handleDelete = async (friendshipId) => {
+        await api.delete(`Friendship/RemoverAmigo?idFriendship=${friendshipId}`)
+            .then(response => console.log(response.data))
+            .catch(error => alert(error));
+
+        getFriends();
+        setFilterFriends(true);
     }
 
-    const handleAddFriend = (receiverId) => {
-        api.post(`Friendship?actualUser=${loggedUser.user.id}&receiverUser=${receiverId}`)
+    const handleAddFriend = async (receiverId) => {
+        await api.post(`Friendship?actualUser=${loggedUser.user.id}&receiverUser=${receiverId}`)
             .then(response => console.log(response))
             .catch(error => console.log(error));
+
+        getFriends();
+        setFilterFriends(true);
     }
 
     // Busca todos os usuários existentes
@@ -38,21 +46,22 @@ export const FriendsPage = () => {
         // Busca todos os usuários
         const usersResponse = await api.get("User");
         const users = usersResponse.data;
-        console.log('user');
-        console.log(users);
-
 
         // Busca somente os amigos
         const friendsResponse = await api.get(`Friendship/Amigos?idUser=${loggedUser.user.id}`);
         const friendsList = friendsResponse.data;
-        console.log('friends');
-        console.log(friendsList);
 
 
-        const usersWithFriendStatus = users.map(user => ({
-            ...user,
-            isFriend: friendsList.some(friend => friend.idUser === user.id)
-        }))
+        const usersWithFriendStatus = users.map(user => {
+            // Busca o Friend com o mesmo id (se houver)
+            const friend = friendsList.find(friend => friend.idUser === user.id);
+
+            return {
+                ...user,
+                isFriend: friendsList.some(friend => friend.idUser === user.id), // retorna true se houver uma amizade com aquele id, se não, false
+                idFriendship: friend ? friend.idFriendship : null // Verifica se "friend" não é null, ou seja, se é amigo
+            }
+        })
 
         setUsersList(usersWithFriendStatus);
     }
@@ -64,7 +73,6 @@ export const FriendsPage = () => {
                 const dataWithFriend = response.data.map(user => ({ ...user, isFriend: true }));
 
                 setUsersList(dataWithFriend);
-                // setUsersList(response.data);
             })
             .catch(error => alert(error));
     }

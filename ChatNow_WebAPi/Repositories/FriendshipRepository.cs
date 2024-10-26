@@ -80,7 +80,12 @@ namespace ChatNow_WebAPi.Repositories
             var friendshipToDelete = _context.Friendships.FirstOrDefault(f => f.IdFriendship == idFriendship);
 
             if (friendshipToDelete is not null)
+            {
+                // Continuar lógica de remoção da Conversa
+                _context.UserConversation.FirstOrDefault(uc => uc.IdUser == friendshipToDelete.IdUserOne || uc.IdUser == friendshipToDelete.IdUserTwo)
+
                 _context.Friendships.Remove(friendshipToDelete);
+            }
 
             _context.SaveChanges();
         }
