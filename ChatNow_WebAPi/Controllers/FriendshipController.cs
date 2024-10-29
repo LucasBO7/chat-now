@@ -1,4 +1,5 @@
-﻿using ChatNow_WebAPi.Repositories;
+﻿using ChatNow_WebAPi.Domains;
+using ChatNow_WebAPi.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -44,7 +45,7 @@ namespace ChatNow_WebAPi.Controllers
         }
 
         [HttpGet("Amigos")]
-        public IActionResult GetAllFriend(Guid idUser)
+        public IActionResult GetAllFriends(Guid idUser)
         {
             try
             {
@@ -59,5 +60,24 @@ namespace ChatNow_WebAPi.Controllers
                 return BadRequest(error.Message);
             }
         }
+
+        [HttpPatch("AceitarAmizade")]
+        public IActionResult AcceptFriendInvite(Guid idFriendship)
+        {
+            try
+            {
+                Friendship updatedFriendship = _friendshipRepository.AcceptFriendInvite(idFriendship);
+
+                if (updatedFriendship is null)
+                    return NotFound("Convite não encontrado!");
+
+                return Ok(updatedFriendship);
+            }
+            catch (Exception error)
+            {
+                return BadRequest(error.Message);
+            }
+        }
+
     }
 }

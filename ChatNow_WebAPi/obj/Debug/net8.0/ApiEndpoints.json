@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "ChatNow_WebAPi.Controllers.ConversationController",
+    "Method": "Get",
+    "RelativePath": "api/Conversation/BuscarConversas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ChatNow_WebAPi.Controllers.FriendshipController",
     "Method": "Post",
     "RelativePath": "api/Friendship",
@@ -22,7 +38,23 @@
   },
   {
     "ContainingType": "ChatNow_WebAPi.Controllers.FriendshipController",
-    "Method": "GetAllFriend",
+    "Method": "AcceptFriendInvite",
+    "RelativePath": "api/Friendship/AceitarAmizade",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idFriendship",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChatNow_WebAPi.Controllers.FriendshipController",
+    "Method": "GetAllFriends",
     "RelativePath": "api/Friendship/Amigos",
     "HttpMethod": "GET",
     "IsController": true,
@@ -103,7 +135,7 @@
   {
     "ContainingType": "ChatNow_WebAPi.Controllers.MessageController",
     "Method": "Get",
-    "RelativePath": "api/Message/ChatMessages",
+    "RelativePath": "api/Message/BuscarMensagensConversa",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

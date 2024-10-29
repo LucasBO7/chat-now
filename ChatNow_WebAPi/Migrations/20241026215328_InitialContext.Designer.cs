@@ -4,6 +4,7 @@ using ChatNow_WebAPi.Infra;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChatNow_WebAPi.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20241026215328_InitialContext")]
+    partial class InitialContext
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,12 +31,15 @@ namespace ChatNow_WebAPi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("FriendshipIdFriendship")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid>("IdFriendship")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdFriendship");
+                    b.HasIndex("FriendshipIdFriendship");
 
                     b.ToTable("Conversations");
                 });
@@ -145,9 +151,7 @@ namespace ChatNow_WebAPi.Migrations
                 {
                     b.HasOne("ChatNow_WebAPi.Domains.Friendship", "Friendship")
                         .WithMany()
-                        .HasForeignKey("IdFriendship")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("FriendshipIdFriendship");
 
                     b.Navigation("Friendship");
                 });

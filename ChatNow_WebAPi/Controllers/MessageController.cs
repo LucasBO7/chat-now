@@ -32,7 +32,7 @@ namespace ChatNow_WebAPi.Controllers
         }
 
 
-        [HttpGet("ChatMessages")]
+        [HttpGet("BuscarMensagensConversa")]
         public async Task<IActionResult> Get(Guid idConversation)
         {
             try

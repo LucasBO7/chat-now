@@ -41,6 +41,5 @@ namespace ChatNow_WebAPi.Infra
         public DbSet<Message> Messages { get; set; }
         public DbSet<Friendship> Friendships { get; set; }
         public DbSet<Status> Status { get; set; }
-        public DbSet<UserConversation> UserConversation { get; set; }
     }
 }

@@ -8,15 +8,20 @@ import {
 import { Header } from "../../Components/Header";
 import { TextInput } from "../../Components/Inputs/inputs";
 import api from "../../Services/Service";
+import { useNavigate } from "react-router-dom";
+import { IoIosSearch } from "react-icons/io";
 
 export const HomePage = () => {
+  const navigate = useNavigate();
+
   const [loggedUser, setLoggedUser] = useState(JSON.parse(localStorage.getItem("user")));
   const [chatUsers, setChatUsers] = useState([]);
   const [conversations, setConversations] = useState([]);
   const [searchUser, setSearchUser] = useState("");
 
+  // Busca todas as conversas (tipo resumos)
   const getAllChats = async () => {
-    await api.get(`Friendship/Amigos?idUser=${loggedUser.user.id}`)
+    await api.get(`Conversation/BuscarConversas?userId=${loggedUser.user.id}`)
       .then(response => setChatUsers(response.data))
       .catch(error => alert(error));
   };
@@ -24,6 +29,7 @@ export const HomePage = () => {
   useEffect(() => {
     getAllChats();
   }, []);
+
 
   return (
     <AsideContainer>
@@ -35,6 +41,7 @@ export const HomePage = () => {
           styles={"mb-10"}
           value={searchUser}
           onChange={(input) => setSearchUser(input.target.value)}
+          icon={<IoIosSearch className="w-[15%] h-full p-2" />}
         />
 
         <CardsContainer>
@@ -43,11 +50,19 @@ export const HomePage = () => {
               .filter(
                 (user) =>
                   user &&
-                  user.name.toLowerCase().includes(searchUser.toLowerCase())
+                  user.friendName.toLowerCase().includes(searchUser.toLowerCase())
               )
-              .map((user, index) => <Card key={index} userName={user.name} />)
+              .map((user, index) =>
+                <Card
+                  key={index}
+                  userImg={user.friendPhotoUrl}
+                  userName={user.friendName}
+                  onClick={() => navigate("/chat", { state: { user: user } })}
+                />)
           }
         </CardsContainer>
+
+
       </LayoutGrid>
     </AsideContainer>
   );

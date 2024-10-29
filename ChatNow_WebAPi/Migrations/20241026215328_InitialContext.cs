@@ -6,22 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ChatNow_WebAPi.Migrations
 {
     /// <inheritdoc />
-    public partial class RealteradoModelsEstrutura : Migration
+    public partial class InitialContext : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Conversations",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Conversations", x => x.Id);
-                });
-
             migrationBuilder.CreateTable(
                 name: "Status",
                 columns: table => new
@@ -83,6 +72,24 @@ namespace ChatNow_WebAPi.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Conversations",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IdFriendship = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    FriendshipIdFriendship = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Conversations", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Conversations_Friendships_FriendshipIdFriendship",
+                        column: x => x.FriendshipIdFriendship,
+                        principalTable: "Friendships",
+                        principalColumn: "IdFriendship");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Messages",
                 columns: table => new
                 {
@@ -109,30 +116,10 @@ namespace ChatNow_WebAPi.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "UserConversation",
-                columns: table => new
-                {
-                    IdUserConversation = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IdUser = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    IdConversation = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ConversationId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_UserConversation", x => x.IdUserConversation);
-                    table.ForeignKey(
-                        name: "FK_UserConversation_Conversations_ConversationId",
-                        column: x => x.ConversationId,
-                        principalTable: "Conversations",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_UserConversation_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id");
-                });
+            migrationBuilder.CreateIndex(
+                name: "IX_Conversations_FriendshipIdFriendship",
+                table: "Conversations",
+                column: "FriendshipIdFriendship");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Friendships_IdUserOne",
@@ -158,35 +145,22 @@ namespace ChatNow_WebAPi.Migrations
                 name: "IX_Messages_SenderId",
                 table: "Messages",
                 column: "SenderId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_UserConversation_ConversationId",
-                table: "UserConversation",
-                column: "ConversationId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_UserConversation_UserId",
-                table: "UserConversation",
-                column: "UserId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Friendships");
-
-            migrationBuilder.DropTable(
                 name: "Messages");
 
             migrationBuilder.DropTable(
-                name: "UserConversation");
+                name: "Conversations");
+
+            migrationBuilder.DropTable(
+                name: "Friendships");
 
             migrationBuilder.DropTable(
                 name: "Status");
-
-            migrationBuilder.DropTable(
-                name: "Conversations");
 
             migrationBuilder.DropTable(
                 name: "Users");

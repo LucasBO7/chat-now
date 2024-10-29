@@ -67,16 +67,28 @@
             <param name="googleId">GoogleId inserted</param>
             <returns>NULL or Object User</returns>
         </member>
-        <member name="T:ChatNow_WebAPi.Migrations.RealteradoModelsEstrutura">
+        <member name="T:ChatNow_WebAPi.Migrations.InitialContext">
             <inheritdoc />
         </member>
-        <member name="M:ChatNow_WebAPi.Migrations.RealteradoModelsEstrutura.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:ChatNow_WebAPi.Migrations.InitialContext.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:ChatNow_WebAPi.Migrations.RealteradoModelsEstrutura.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:ChatNow_WebAPi.Migrations.InitialContext.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:ChatNow_WebAPi.Migrations.RealteradoModelsEstrutura.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+        <member name="M:ChatNow_WebAPi.Migrations.InitialContext.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ChatNow_WebAPi.Migrations.ArrumadoDataannotationConversation">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.ArrumadoDataannotationConversation.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.ArrumadoDataannotationConversation.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ChatNow_WebAPi.Migrations.ArrumadoDataannotationConversation.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
         <member name="M:ChatNow_WebAPi.Repositories.UserRepository.Register(ChatNow_WebAPi.Domains.User)">

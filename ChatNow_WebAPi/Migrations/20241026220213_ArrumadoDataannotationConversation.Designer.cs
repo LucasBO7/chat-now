@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChatNow_WebAPi.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20241014205911_RealteradoModelsEstrutura")]
-    partial class RealteradoModelsEstrutura
+    [Migration("20241026220213_ArrumadoDataannotationConversation")]
+    partial class ArrumadoDataannotationConversation
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,7 +31,12 @@ namespace ChatNow_WebAPi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("IdFriendship")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("IdFriendship");
 
                     b.ToTable("Conversations");
                 });
@@ -139,31 +144,15 @@ namespace ChatNow_WebAPi.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("ChatNow_WebAPi.Domains.UserConversation", b =>
+            modelBuilder.Entity("ChatNow_WebAPi.Domains.Conversation", b =>
                 {
-                    b.Property<Guid>("IdUserConversation")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.HasOne("ChatNow_WebAPi.Domains.Friendship", "Friendship")
+                        .WithMany()
+                        .HasForeignKey("IdFriendship")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Property<Guid?>("ConversationId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("IdConversation")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("IdUser")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("IdUserConversation");
-
-                    b.HasIndex("ConversationId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserConversation");
+                    b.Navigation("Friendship");
                 });
 
             modelBuilder.Entity("ChatNow_WebAPi.Domains.Friendship", b =>
@@ -210,21 +199,6 @@ namespace ChatNow_WebAPi.Migrations
                     b.Navigation("Conversation");
 
                     b.Navigation("Sender");
-                });
-
-            modelBuilder.Entity("ChatNow_WebAPi.Domains.UserConversation", b =>
-                {
-                    b.HasOne("ChatNow_WebAPi.Domains.Conversation", "Conversation")
-                        .WithMany()
-                        .HasForeignKey("ConversationId");
-
-                    b.HasOne("ChatNow_WebAPi.Domains.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("Conversation");
-
-                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

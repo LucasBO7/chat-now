@@ -3,9 +3,12 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa6";
 import PropTypes from "prop-types";
 
-export const Card = ({ userImg, userName, lastMessage }) => {
+export const Card = ({ userImg, userName, lastMessage, onClick }) => {
     return (
-        <div className="flex flex-col gap-4 w-[48%] h-36 p-[10px] bg-[#D9D9D9] rounded-2xl">
+        <div
+            className="flex flex-col gap-4 w-[48%] h-36 p-[10px] bg-[#D9D9D9] rounded-2xl"
+            onClick={onClick}
+        >
             <div className="flex flex-row items-center justify-between gap-2">
                 <img className="w-11 h-11 bg-purple rounded-2xl" src={userImg} alt="" />
 

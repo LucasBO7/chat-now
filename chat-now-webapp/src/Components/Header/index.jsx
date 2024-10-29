@@ -4,7 +4,7 @@ import { LayoutGrid } from "../Containers/Containers";
 export const Header = ({ userName }) => {
   return (
     <header className="w-full h-[90px] bg-light-purple drop-shadow-xl">
-      <LayoutGrid style={"flex items-center justify-between"}>
+      <LayoutGrid style={"flex h-full items-center justify-between"}>
         <p>{userName}</p>
 
         <button className="h-fit w-fit">

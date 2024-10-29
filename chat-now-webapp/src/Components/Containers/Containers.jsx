@@ -3,11 +3,11 @@ export const AsideContainer = ({ children }) => {
 };
 
 export const LayoutGrid = ({ children, style }) => {
-  return <div className={`flex items-start justify-center w-full h-full px-[10%] ${style}`}>{children}</div>;
+  return <div className={`flex items-start justify-center w-full px-[10%] ${style}`}>{children}</div>;
 };
 
-export const CardsContainer = ({ children }) => {
+export const CardsContainer = ({ children, style }) => {
   return (
-    <div className="flex flex-row flex-wrap w-full gap-3 items-center">{children}</div>
+    <div className={`flex flex-row flex-wrap w-full gap-3 items-center ${style}`}>{children}</div>
   );
 }

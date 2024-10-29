@@ -35,7 +35,6 @@ namespace ChatNow_WebAPi.Repositories
             }
             #endregion
 
-
             // Gera e salva senha criptografada
             newUser.Password = Criptografia.GenerateHash(newUser.Password!);
 
