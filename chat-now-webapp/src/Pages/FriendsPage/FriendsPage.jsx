@@ -15,6 +15,8 @@ export const FriendsPage = () => {
     const [filterFriends, setFilterFriends] = useState(false);
     const [usersList, setUsersList] = useState(null);
 
+    const [filteredUsersList, setFilteredUsersList] = useState([]);
+
     const handleFilterChange = () => {
         filterFriends === true
             ? getFriends()
@@ -77,10 +79,20 @@ export const FriendsPage = () => {
             .catch(error => alert(error));
     }
 
+    // Carrega os usuários/amigos ao entrar na página 
     useEffect(() => {
-        // Carrega os usuários/amigos ao entrar na página 
         handleFilterChange();
     }, [])
+
+    // Pega a lista de usuários com/sem pesquisa
+    useEffect(() => {
+        // Filtra a lista se for pesqusiado : pega a lista de usuários
+        searchUser ? filterListBySearch() : setFilteredUsersList(usersList);
+    }, [searchUser, usersList])
+
+    const filterListBySearch = () => {
+        setFilteredUsersList(usersList.filter(user => user.name.toLowerCase().includes(searchUser.toLowerCase())))
+    }
 
     return (
         <AsideContainer>
@@ -101,19 +113,22 @@ export const FriendsPage = () => {
                     onChange={(input) => setSearchUser(input.target.value)}
                 />
 
-                <CardsContainer>
+                <CardsContainer style={"flex-col justify-start max-h-[500px] h-[500px] overflow-y-scroll"}>
                     {
-                        usersList
-                            ? (usersList.sort((a, b) => b.isFriend - a.isFriend).map((user, index) =>
-                                <UserCard
-                                    key={index}
-                                    isFriend={user.isFriend}
-                                    user={user}
-                                    handleDelete={handleDelete}
-                                    handleAddFriend={handleAddFriend}
-                                />
-                            ))
-                            : <p>Não há nada</p>
+                        filteredUsersList && filteredUsersList.length > 0
+                            ? (filteredUsersList
+                                .sort((a, b) => b.isFriend - a.isFriend)
+                                .map((user, index) =>
+                                    <UserCard
+                                        key={index}
+                                        isFriend={user.isFriend}
+                                        user={user}
+                                        handleDelete={handleDelete}
+                                        handleAddFriend={handleAddFriend}
+                                    />
+                                )
+                            )
+                            : <p className="text-white w-full text-center font-Nunito text-lg">Não foi encontrado nenhum usuário!</p>
                     }
                 </CardsContainer>
 

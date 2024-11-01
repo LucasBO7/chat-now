@@ -590,3 +590,11 @@ C:\Users\lucas\Desktop\chat-now\ChatNow_WebAPi\obj\Debug\net8.0\ChatNow_WebAPi.x
 C:\Users\lucas\Desktop\chat-now\ChatNow_WebAPi\obj\Debug\net8.0\ChatNow_WebAPi.pdb
 C:\Users\lucas\Desktop\chat-now\ChatNow_WebAPi\obj\Debug\net8.0\ChatNow_WebAPi.genruntimeconfig.cache
 C:\Users\lucas\Desktop\chat-now\ChatNow_WebAPi\obj\Debug\net8.0\ref\ChatNow_WebAPi.dll
+C:\Users\lucas\Desktop\chat-now\ChatNow_WebAPi\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\lucas\Desktop\chat-now\ChatNow_WebAPi\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\lucas\Desktop\chat-now\ChatNow_WebAPi\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\lucas\Desktop\chat-now\ChatNow_WebAPi\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\lucas\Desktop\chat-now\ChatNow_WebAPi\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\lucas\Desktop\chat-now\ChatNow_WebAPi\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\lucas\Desktop\chat-now\ChatNow_WebAPi\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\lucas\Desktop\chat-now\ChatNow_WebAPi\bin\Debug\net8.0\Microsoft.Extensions.Features.dll

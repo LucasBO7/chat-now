@@ -3,28 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\repositories\\conversationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:repositories\\conversationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\viewmodels\\conversationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:viewmodels\\conversationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\hubs\\ichathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:hubs\\ichathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\controllers\\conversationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:controllers\\conversationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\repositories\\friendshiprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:repositories\\friendshiprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\repositories\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:repositories\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\controllers\\conversationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:controllers\\conversationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\controllers\\friendshipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:controllers\\friendshipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\viewmodels\\conversationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:viewmodels\\conversationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\repositories\\conversationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:repositories\\conversationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|c:\\users\\lucas\\desktop\\chat-now\\chatnow_webapi\\repositories\\friendshiprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2C99A3-0206-47C5-8B93-9CEACB75BE1F}|ChatNow_WebAPi.csproj|solutionrelative:repositories\\friendshiprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +50,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "IChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Hubs\\IChatHub.cs",
+              "RelativeDocumentMoniker": "Hubs\\IChatHub.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Hubs\\IChatHub.cs",
+              "RelativeToolTip": "Hubs\\IChatHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T23:29:07.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MessageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\MessageRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\MessageRepository.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\MessageRepository.cs",
+              "RelativeToolTip": "Repositories\\MessageRepository.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAEwDsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T16:04:28.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "Hubs\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "Hubs\\ChatHub.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAhwB8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T14:45:33.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ConversationDto.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\ViewModels\\ConversationDto.cs",
               "RelativeDocumentMoniker": "ViewModels\\ConversationDto.cs",
@@ -46,51 +101,11 @@
               "RelativeToolTip": "ViewModels\\ConversationDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T23:20:33.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T23:20:33.085Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ConversationRepository.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\ConversationRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ConversationRepository.cs",
-              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\ConversationRepository.cs",
-              "RelativeToolTip": "Repositories\\ConversationRepository.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T23:19:36.9Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MessageController.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\MessageController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MessageController.cs",
-              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\MessageController.cs",
-              "RelativeToolTip": "Controllers\\MessageController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T23:16:59.469Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FriendshipRepository.cs",
-              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\FriendshipRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\FriendshipRepository.cs",
-              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\FriendshipRepository.cs",
-              "RelativeToolTip": "Repositories\\FriendshipRepository.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAzwFsAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T23:06:45.543Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FriendshipController.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\FriendshipController.cs",
               "RelativeDocumentMoniker": "Controllers\\FriendshipController.cs",
@@ -98,21 +113,68 @@
               "RelativeToolTip": "Controllers\\FriendshipController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T22:46:42.5Z",
+              "WhenOpened": "2024-10-26T22:46:42.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MessageController.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\MessageController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MessageController.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\MessageController.cs",
+              "RelativeToolTip": "Controllers\\MessageController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAowGMAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T23:16:59.469Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ConversationController.cs",
               "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\ConversationController.cs",
               "RelativeDocumentMoniker": "Controllers\\ConversationController.cs",
               "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\ConversationController.cs",
               "RelativeToolTip": "Controllers\\ConversationController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAQwBUAAABgAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAjwA4AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T22:42:30.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T22:42:30.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAIBJwG4AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T14:48:58.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ConversationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\ConversationRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ConversationRepository.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\ConversationRepository.cs",
+              "RelativeToolTip": "Repositories\\ConversationRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwCIAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T23:19:36.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FriendshipRepository.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\FriendshipRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\FriendshipRepository.cs",
+              "ToolTip": "C:\\Users\\lucas\\Desktop\\chat-now\\ChatNow_WebAPi\\Repositories\\FriendshipRepository.cs",
+              "RelativeToolTip": "Repositories\\FriendshipRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwFsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T23:06:45.543Z"
             }
           ]
         }

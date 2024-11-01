@@ -1,3 +1,4 @@
+using ChatNow_WebAPi.Hubs;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
@@ -5,15 +6,16 @@ using System.Reflection;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddSignalR();
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAllOrigins",
+    options.AddPolicy("AllowOrigin",
         builder =>
         {
-            builder.AllowAnyOrigin()
+            builder.WithOrigins("http://localhost:5173")
                    .AllowAnyMethod()
-                   .AllowAnyHeader();
+                   .AllowAnyHeader()
+                   .AllowCredentials();
         });
 });
 builder.Services.AddControllers();
@@ -112,7 +114,12 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-app.UseCors("AllowAllOrigins");
+app.UseCors(options =>
+        options.WithOrigins("http://localhost:5173")
+        .AllowAnyHeader()
+        .WithMethods("GET", "POST")
+        .AllowCredentials()
+);
 app.UseHttpsRedirection();
 
 // Usar autenticação
@@ -120,5 +127,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapHub<ChatHub>("/chat");
+app.UseCors("AllowOrigin");
 
 app.Run();

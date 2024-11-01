@@ -38,6 +38,13 @@
             </summary>
             <returns>Lista de Users/BadRequest</returns>
         </member>
+        <member name="M:ChatNow_WebAPi.Hubs.IChatHub.ReceiveMessage(System.String)">
+            <summary>
+            Retorna alguma mensagem, dado ou informação ao cliente
+            </summary>
+            <param name="message">Mensagem a ser enviada</param>
+            <returns>Task</returns>
+        </member>
         <member name="M:ChatNow_WebAPi.Interfaces.IUserRepository.Register(ChatNow_WebAPi.Domains.User)">
             <summary>
             Registers a new User in Db

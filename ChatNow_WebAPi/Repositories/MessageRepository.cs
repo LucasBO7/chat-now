@@ -1,6 +1,8 @@
 ﻿using ChatNow_WebAPi.Domains;
+using ChatNow_WebAPi.Hubs;
 using ChatNow_WebAPi.Infra;
 using ChatNow_WebAPi.ViewModels;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 
 namespace ChatNow_WebAPi.Repositories
@@ -8,13 +10,15 @@ namespace ChatNow_WebAPi.Repositories
     public class MessageRepository
     {
         private readonly Context _context;
+        //private readonly IHubContext<ChatHub, IChatHub> _hub;
 
         public MessageRepository()
         {
             _context = new();
+            //_hub = hub;
         }
 
-        public void Register(MessageRegisterDto insertedMessage)
+        public async void Register(MessageRegisterDto insertedMessage)
         {
             Message newMessage = new()
             {
@@ -24,6 +28,19 @@ namespace ChatNow_WebAPi.Repositories
             };
 
             _context.Messages.Add(newMessage);
+
+
+
+            // Envia a mensagem ao usuário com SignalR
+
+            //await _hub.Groups.AddToGroupAsync(insertedMessage.SenderId.ToString(), insertedMessage.ConversationId.ToString());
+            //_hub.Groups.AddToGroupAsync()
+
+            //await _hub.Groups.AddToGroupAsync(Context.ConnectionId, insertedMessage.ConversationId);
+            //_hub.Clients.Group(insertedMessage.ConversationId.ToString()).ReceiveMessage();
+
+            //await chatHub.SendMessageTo(Convert.ToString(insertedMessage.ConversationId)!, insertedMessage.Content!, Convert.ToString(insertedMessage.SenderId)!);
+
             _context.SaveChanges();
         }
 
